@@ -6,6 +6,8 @@ let bar = document.querySelector(".bar")
 let count_hearts = 0
 let length = 0
 let width = ""
+const food = document.querySelector('.food');
+
 btn_caress.addEventListener('click', function () {
     if (count_hearts + 4 < 100) {
         count_hearts += 5
@@ -22,9 +24,7 @@ btn_caress.addEventListener('click', function () {
         if(count_hearts >61){
             bar.style.background = 'green';
         } 
-    } else {
-
-    }
+    } 
 }
 )
 btn_feed.addEventListener('click', function () {
@@ -43,9 +43,7 @@ btn_feed.addEventListener('click', function () {
         if(count_hearts >61){
             bar.style.background = 'green';
         } 
-    } else {
-
-    }
+    } 
 
 })
 function taking_hearts() {
@@ -55,6 +53,11 @@ function taking_hearts() {
         length -= 1
         width = length + "%"
         bar.style.height = width
+        if (count_hearts === 0) {
+            food.style.display = 'inline-block';
+        } else {
+            food.style.display = 'none';
+        }
         if(count_hearts<30){
             bar.style.background = 'red';
         } 
@@ -64,9 +67,6 @@ function taking_hearts() {
         if(count_hearts >61){
             bar.style.background = 'green';
         } 
-    }
-    else {
-
     }
 }
 let timer = setInterval(taking_hearts, 1000)

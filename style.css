@@ -14,14 +14,14 @@ body {
     font-weight: 700;
     font-family: "Poppins", sans-serif;
     background-color: transparent;
-    border: 3px solid #612aed;
-    padding: 10px;
-    margin-top: 10px;
+    border: 3px solid #000000;
+    padding: 5px;
+    margin-top: 5px;
     transition: 0.5s;
 }
 
 .btn:hover {
-    box-shadow: 0 0 10px #612aed;
+    box-shadow: 0 0 10px #000000;
     transform: scale(1.1);
 }
 
@@ -38,22 +38,22 @@ body {
     align-items: center;
     height: 50%;
     width: 50%;
-    padding: 15px;
+    padding: 7px;
     border: 3px solid rgb(26, 55, 80);
     border-radius: 5px;
 }
 
 .actions {
     background-color: bisque;
-    width: 95%;
-    padding: 15px;
+    width: 90%;
+    padding: 7px;
     border: 3px solid rgb(26, 55, 80);
     border-radius: 5px;
 }
 .happy-bar{
     display: flex;
     background-color: #000000;
-    height: 53%;
+    height: 51%;
     margin: 0 8px;
     border-radius: 5px;
 }
@@ -65,9 +65,41 @@ body {
     background: red;
 }
 
+.cat {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .content {
-    background: url(walk.png);
+    background: url(res1.png);
     background-size: 300px 75px;
     width: 75px;
     height: 75px;
+    animation: steps 20s linear infinite;
+}
+
+@keyframes steps {
+    0% {
+        transform: translateX(-20vw);
+    }
+    50% {
+        transform: translateX(20vw);
+    }
+    51% {
+        transform: translateX(20vw) scale(-1, 1);
+    }
+    100%{
+        transform: translateX(-20vw) scale(-1, 1);
+    }
+   
+}
+
+.food {
+    width: 100px;
+    position: relative;
+    transform: scale(-1, 1);
+    top: -80px;
+    left: 50px;
 }
