@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     background: linear-gradient(45deg, rgb(202, 189, 207) 27%, rgb(131, 211, 213) 74%);
+    user-select: none;
     font-family: "Poppins", sans-serif;
     height: 100vh;
     display: flex;
@@ -45,6 +46,7 @@ body {
 
 .actions {
     background-color: bisque;
+    user-select: none;
     width: 90%;
     padding: 7px;
     border: 3px solid rgb(26, 55, 80);
@@ -73,6 +75,7 @@ body {
 }
 
 .content {
+    position: relative;
     background: url(res1.png);
     background-size: 300px 75px;
     width: 75px;
@@ -96,15 +99,16 @@ body {
    
 }
 
-.food {
-    width: 100px;
-    position: relative;
-    transform: scale(-1, 1);
-    top: -80px;
-    left: 50px;
-}
+
 .point{
     animation: points 0.5s linear;
+}
+
+.content span {
+    user-select: none;
+    position: relative;
+    top: -60%;
+    color: #fff;
 }
 @keyframes points {
     0%{transform: none;}

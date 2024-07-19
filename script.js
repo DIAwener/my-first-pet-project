@@ -1,16 +1,18 @@
-let btn_caress = document.querySelector(".btn-caress")
-let btn_feed = document.querySelector(".btn-feed")
-let indicator_hearts = document.querySelector(".indicator-hearts")
-let number_hearts = document.querySelector(".number-hearts")
-let bar = document.querySelector(".bar")
-let p = document.createElement("p")
-let body = document.querySelector("body")
-let count_hearts = 0
-let length = 0
-let width = ""
-const food = document.querySelector('.food');
+let content = document.querySelector(".content");
+let btn_feed = document.querySelector(".btn-feed");
+let indicator_hearts = document.querySelector(".indicator-hearts");
+let number_hearts = document.querySelector(".number-hearts");
+let bar = document.querySelector(".bar");
+let p = document.createElement("p");
+let body = document.querySelector("body");
+let count_hearts = 0;
+let length = 0;
+let width = "";
+const food = document.querySelector('span');
 
-btn_caress.addEventListener('click', function () {
+
+
+content.addEventListener('click', function () {
     if (count_hearts + 4 < 100) {
         count_hearts += 5
         number_hearts.textContent = count_hearts

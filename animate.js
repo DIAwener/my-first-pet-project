@@ -9,5 +9,8 @@ function playAnim() {
     }
     
 }
-
+cat.addEventListener('click', () => {
+    cat.style.top = '-2%';
+    setTimeout(() => cat.style.top = '0', 100)
+})
 setInterval(playAnim, 300);
